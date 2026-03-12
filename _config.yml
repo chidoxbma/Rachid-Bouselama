@@ -1,5 +1,5 @@
 lang:                  en
-title:                 Hydejack
+title:                 Welcome to my page
 copyright:             © 2024. All rights reserved.
 
 accent_image:          /assets/img/sidebar-bg.jpg
@@ -14,7 +14,7 @@ hydejack:
 
   no_mark_external:    false
   no_push_state:       false
-  no_drawer:           true
+  no_drawer:           false
   no_navbar:           false
   no_search:           false
   no_inline_css:       false
