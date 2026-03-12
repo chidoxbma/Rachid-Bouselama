@@ -9,3 +9,8 @@ vendor
 
 #<removed/js>
 #<removed/css>
+_site/package.json
+/_site
+Gemfile
+Gemfile.lock
+index.md
