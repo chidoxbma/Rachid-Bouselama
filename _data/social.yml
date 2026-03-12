@@ -1,9 +1,9 @@
 linkedin:
   name: "LinkedIn"
-  icon: "icon-linkedin"
+  image: "/assets/img/social-icons/icon-linkedin.svg"
   prepend: ""
 
 instagram:
   name: "Instagram"
-  icon: "icon-instagram"
+  image: "/assets/img/social-icons/icon-instagram.svg"
   prepend: ""

@@ -33,7 +33,11 @@
 
   <li>
     <a href="{{ url }}" title="{{ name }}" class="no-mark-external">
-      <span class="{{ icon }}"></span>
+      {% if data_social.image %}
+        <img src="{{ data_social.image }}" alt="{{ name }}" class="social-icon" width="24" height="24" />
+      {% else %}
+        <span class="{{ icon }}"></span>
+      {% endif %}
       <span class="sr-only">{{ name }}</span>
     </a>
   </li>
