@@ -1,122 +1,56 @@
-<!DOCTYPE html>
-{% assign sidebar = site.data.data.sidebar %}
-<!--[if IE 8]> <html lang="{{ sidebar.htmllang }}" class="ie8"> <![endif]-->
-<!--[if IE 9]> <html lang="{{ sidebar.htmllang }}" class="ie9"> <![endif]-->
-<html lang="{{ sidebar.htmllang }}" prefix="og: http://ogp.me/ns#">
-{% include head.html %}
-<body>
-  <div class="wrapper">
-    <div class="sidebar-wrapper">
-      <header>
-        {% if sidebar.name %}<img class="avatar" src="{{ site.baseurl }}/images/{{ sidebar.img }}" alt="{{ sidebar.pf }}" title="{{ sidebar.pf }}">{% endif %}
-        {% if sidebar.name %}<br><h1 class="name">{{ sidebar.name }}</h1><br>{% endif %}
-        {% if sidebar.tagline0 %}<br class="t2"><h3 class="tagline0">{{ sidebar.tagline0 }}</h3><br class="t2">{% endif %}
-        {% if sidebar.tagline1 %}<br><h3 class="tagline1">{{ sidebar.tagline1 }}</h3>{% endif %}
-      </header>
+---
+# Copyright (c) 2018 Florian Klampfer <https://qwtel.com/>
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-      {% include contact.html %}
-    </div>
+layout: base
+---
 
-    <div class="glob">
-      <nav>
-        <div class="t11">
-          <div class="div-a">
-            <a href="{{ sidebar.linkfr }}">
-              <img src="{{ site.baseurl }}/images/fr.svg" alt="{{ sidebar.altfr }}">
-              <p>{{ sidebar.fr }}</p>
+{% assign strings = site.data.strings %}
+
+<article class="page" role="article">
+  <header>
+    <h1 class="page-title">{{ page.title | default:strings.home | default:"Home" }}</h1>
+    {% include components/message.html text=page.description hide=page.hide_description %}
+  </header>
+
+  {{ content }}
+
+  <hr class="dingbat related"/>
+
+  {% if site.posts.size > 0 %}
+    <h2 class="hr-bottom">{{ strings.posts | default:"Posts" }}</h2>
+    <ul class="related-posts">
+      {% for post in site.posts limit:5 %}
+        {% include_cached components/post-list-item.html post=post %}
+      {% endfor %}
+    </ul>
+  {% endif %}
+
+  {% assign pages = site.html_pages | where:"layout","page" | where_exp:"page","page.sitemap != false" %}
+  {% if pages.size > 0 %}
+    <h2 class="hr-bottom">{{ strings.pages | default:"Pages" }}</h2>
+    <ul class="related-posts">
+      {% for page in pages limit:5 %}
+        {% if page.layout == 'page' %}
+          <li class="h4">
+            <a href="{{ page.url | relative_url }}" class="flip-title">
+              <span>{{ page.title }}</span>
             </a>
-          </div>
-        </div>
-
-        <div class="t12">
-          <div class="div-a">
-            <a href="{{ sidebar.linken }}">
-              <img src="{{ site.baseurl }}/images/en.svg" alt="{{ sidebar.alten }}">
-              <p>{{ sidebar.en }}</p>
-            </a>
-          </div>
-        </div>
-      </nav>
-      {% include career.html %}
-      {% include objectif.html %}
-    </div>
-
-    <main>
-      {% include education.html %}
-      {% include cert.html %}
-      {% include experiences.html %}
-      {% include stages.html %}
-      {% include skills.html %}
-      {% include language.html %}
-      {% include apt.html %}
-      {% include interet.html %}
-      {% include benevole.html %}
-      {% include complement.html %}
-    </main>
-
-    {% assign projects = site.data.data.projects %}
-    {% if projects %}
-      <article>
-        <div class="project-title">
-          <svg width="30" height="30" viewBox="0 0 30 30"><path d="M3.5,25c0-2,0-7,0-9l7.5,3.5l4-4.5l4,4.5l7.5-3c0,2,0,6.5,0,8.5L15,30L3.5,25z M8.7,18.4 M26,9L15,4.5L4,9l11,4.5L26,9z M30,13.5L27,10l-11,4.5l3,3.5L30,13.5z M3,10l-3,3.5L11,18l3-3.5L3,10z M30,4.5L18.5,0l-3,3.5L27,8L30,4.5zM14.5,3.5l-3-3.5L0,4.5L3,8 M4,7.9C4,7.9,4,7.9,4,7.9C4,7.9,4,7.9,4,7.9C4,7.9,4,7.9,4,7.9C4,7.9,4,7.9,4,7.9z"/></svg>
-          <h2 class="p-title">{{ projects.title }}</h2>
-        </div>
-
-        {% if projects.intro %}<div class="intro"><p>{{ projects.intro }}</p></div>{% endif %}
-
-        <div class="row">
-          {% for project in projects.assignments %}
-            <div class="column">
-              <div class="content col-{{ forloop.index }}">
-                {% if project.img %}<div class="img-proj"><a target="_blank" href="{{ site.baseurl }}/images/{{ project.img }}"><img src="{{ site.baseurl }}/images/{{ project.img }}" alt="{{ project.img | replace:'-fr.svg','' }}" title="{{ project.img | replace:'-fr.svg','' }}" style="width:100%"></a></div>{% endif %}
-                <div class="n3">
-                  <div class="desc">
-                    <svg width="18" height="18"><path d="M7.3,7.3C7.7,6.2,8,5.2,8.3,4.2c0-0.1,0-0.2,0.1-0.2C8.5,3.9,8.8,3.6,9,3.5C9.1,3.6,9.1,3.9,9.1,4c0.2,0.8,0.3,1.6,0.4,2.3c0.1,0.5,0.2,1,0.4,1.5c0.2-0.7,0.4-1.4,0.7-2.1c0.1-0.2,0.3-0.4,0.4-0.6c0.2,0.2,0.5,0.3,0.6,0.5c0.2,0.5,0.5,0.6,1.1,0.6c1,0,2.1,0,3.1,0c0.3,0,0.7-0.2,0.7,0.2c0,0.4-0.3,0.5-0.6,0.5c-1.3,0-2.5,0-3.8,0c-0.3,0-0.6-0.1-1-0.2c-0.3,0.9-0.6,1.8-0.9,2.8C10.2,9.7,9.7,9.8,9.5,10C9.4,9.8,9.4,9.7,9.4,9.5C9.1,8.3,8.9,7.1,8.6,5.8C8.5,6.1,8.4,6.4,8.3,6.7C8.1,7.2,8,7.8,7.8,8.3C7.8,8.4,7.6,8.6,7.4,8.7C7.3,8.7,7.1,8.5,7,8.3c-0.3-0.5-0.5-1-0.7-1.5C5.7,6.9,5.2,7,4.6,7C3.8,7,2.9,7,2,7C1.8,7,1.5,6.6,1.5,6.5C1.4,6.1,1.8,6.3,2.1,6.3c0.9,0,1.9,0,2.8,0C5.3,6.3,5.7,6.1,6,6c0.4-0.2,0.6-0.2,0.8,0.2C7,6.5,7.1,6.8,7.3,7.3z M3.5,17H7l1-3H1.5c-1,0-1.5-0.5-1.5-1.5v-11C0,0.5,0.5,0,1.5,0h15c1,0,1.5,0.5,1.5,1.5v11c0,1-0.5,1.5-1.5,1.5H10l1,3h3.5v1h-11V17z M17,1H1v12h16V1z"/></svg>
-                    <h3>{{ project.title }} :</h3>
-                  </div>
-
-                  {% if project.tagline %}
-                  <div class="n1">
-                    {% for n1 in project.tagline %}
-                    <div class="n2">
-                      <svg width="12" height="18" viewBox="0 -6 12 18"><circle cx="3" cy="3" r="3"/></svg>
-                      <p>{{ n1.task }}.</p>
-                    </div>
-                    {% endfor %}
-                  </div>
-                  {% endif %}
-                </div>
-
-                {% if project.img1 and project.img2 %}
-                  <div class="img-glob">
-                    <div class="img-1"><div class="img-cont"><a target="_blank" href="{{ site.baseurl }}/images/{{ project.img1 }}">
-                      <img src="{{ site.baseurl }}/images/{{ project.img1 }}" alt="{{ project.img1 | replace:'-fr.svg','' }}" title="{{ project.img1 | replace:'-fr.svg','' }}" style="width:100%">
-                    </a></div></div>
-                    <div class="img-2"><div class="img-cont"><a target="_blank" href="{{ site.baseurl }}/images/{{ project.img2 }}">
-                      <img src="{{ site.baseurl }}/images/{{ project.img2 }}" alt="{{ project.img2 | replace:'-fr.svg','' }}" title="{{ project.img2 | replace:'-fr.svg','' }}" style="width:100%">
-                    </a></div></div>
-                  </div>
-                {% endif %}
-              </div>
-            </div>
-          {% endfor %}
-        </div>
-      </article>
-    {% endif %}
-
-    <footer>
-      <p xmlns:cc="http://creativecommons.org/ns#" href="https://www.linkedin.com/in/abdelhafid-elazouzi/" property="cc:attributionName" rel="cc:attributionURL">{{ sidebar.design }}.</p>
-      <p>{{ sidebar.droit }} - <span class="oldtime"></span><script>var d = new Date(); var c = d.getUTCFullYear(); $(".oldtime").text(c);</script>.</p>
-      <hr>
-      <p class="pbr" xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Dataset" property="dct:title" rel="dct:type">{{ sidebar.cont }}
-        <a rel="license" href="{{ sidebar.lic }}" target="_blank"><img alt="Licence Creative Commons" src="{{ site.baseurl }}/images/(CC) BY-NC-SA.png" title="Licence Creative Commons"></a> :
-      </p>
-      <div>
-        <div><svg width="12" height="18" viewBox="0 -6 12 18"><circle cx="3" cy="3" r="3"/></svg><h6>{{ sidebar.licence1 }}.</h6></div>
-        <div><svg width="12" height="18" viewBox="0 -6 12 18"><circle cx="3" cy="3" r="3"/></svg><h6>{{ sidebar.licence2 }}.</h6></div>
-        <div><svg width="12" height="18" viewBox="0 -6 12 18"><circle cx="3" cy="3" r="3"/></svg><h6>{{ sidebar.licence3 }}.</h6></div>
-      </div>
-    </footer>
-  </div>
-</body>
-</html>
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  {% endif %}
+</article>
