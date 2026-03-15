@@ -31,4 +31,23 @@ window.addEventListener('DOMContentLoaded', event => {
         });
     });
 
+    const imageModal = document.getElementById('projectImageModal');
+    if (imageModal) {
+        imageModal.addEventListener('show.bs.modal', function (event) {
+            const trigger = event.relatedTarget;
+            if (!trigger) {
+                return;
+            }
+
+            const fullImage = trigger.getAttribute('data-full-image') || trigger.getAttribute('src');
+            const imageAlt = trigger.getAttribute('alt') || 'Project image preview';
+            const preview = imageModal.querySelector('#projectImageModalPreview');
+
+            if (preview) {
+                preview.setAttribute('src', fullImage);
+                preview.setAttribute('alt', imageAlt);
+            }
+        });
+    }
+
 });

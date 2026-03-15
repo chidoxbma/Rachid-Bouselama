@@ -10978,28 +10978,33 @@ section.resume-section .resume-section-content {
 .project-survey-wifi .project-survey-wifi-media,
 .project-survey-wifi .project-survey-wifi-details,
 .project-study-wifi .project-study-wifi-media,
-.project-study-wifi .project-study-wifi-details {
+.project-study-wifi .project-study-wifi-details,
+.project-open-firmwares .project-open-firmwares-media,
+.project-open-firmwares .project-open-firmwares-details {
   min-height: 100%;
 }
 
 .project-n8n .project-n8n-details,
 .project-wifi-atack .project-wifi-atack-details,
 .project-survey-wifi .project-survey-wifi-details,
-.project-study-wifi .project-study-wifi-details {
+.project-study-wifi .project-study-wifi-details,
+.project-open-firmwares .project-open-firmwares-details {
   flex-direction: column;
 }
 
 .project-n8n .project-n8n-media,
 .project-wifi-atack .project-wifi-atack-media,
 .project-survey-wifi .project-survey-wifi-media,
-.project-study-wifi .project-study-wifi-media {
+.project-study-wifi .project-study-wifi-media,
+.project-open-firmwares .project-open-firmwares-media {
   align-items: stretch;
 }
 
 .project-n8n .project-n8n-image,
 .project-wifi-atack .project-wifi-atack-image,
 .project-survey-wifi .project-survey-wifi-image,
-.project-study-wifi .project-study-wifi-image {
+.project-study-wifi .project-study-wifi-image,
+.project-open-firmwares .project-open-firmwares-image {
   display: block;
   width: 100%;
   height: 100%;
@@ -11009,11 +11014,16 @@ section.resume-section .resume-section-content {
      object-position: center;
 }
 
+.project-image-preview {
+  cursor: zoom-in;
+}
+
 @media (max-width: 767.98px) {
   .project-n8n .project-n8n-image,
   .project-wifi-atack .project-wifi-atack-image,
   .project-survey-wifi .project-survey-wifi-image,
-  .project-study-wifi .project-study-wifi-image {
+  .project-study-wifi .project-study-wifi-image,
+  .project-open-firmwares .project-open-firmwares-image {
     height: auto;
   }
 }
