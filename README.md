@@ -2,6 +2,10 @@
 
 A professional portfolio website showcasing projects and experience in network security, infrastructure, and web development.
 
+## 🌐 View Live Website
+
+**[Visit the Live Website](https://chidoxbma.github.io/Rachid-Bouselama/)**
+
 ## ⚠️ Important Notice - Personal Data & Usage Rights
 
 ### Personal Data Protection
