@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="Professional Projects - Rachid Bouselama - Network & Security Engineer" />
+        <meta name="author" content="Rachid Bouselama" />
+        <title>Professional Projects | Rachid Bouselama</title>
+        <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+        <!-- Font Awesome icons -->
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+        <!-- Custom CSS -->
+        <link href="css/styles.css" rel="stylesheet" />
+    <base target="_blank">
+</head>
+    <body id="page-top">
+        
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <span class="brand-text">Rachid<span class="brand-accent">.</span></span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html#about"><i class="fas fa-user me-2"></i>About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html#experience"><i class="fas fa-briefcase me-2"></i>Experience</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html#skills"><i class="fas fa-code me-2"></i>Skills</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="projects.html"><i class="fas fa-project-diagram me-2"></i>Projects</a></li>
+                        <li class="nav-item">
+                            <a class="nav-link download-btn" href="assets/pdf/resume.pdf" download title="Download Resume">
+                                <i class="fas fa-download me-2"></i>CV
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="page-header-bg"></div>
+            <div class="container">
+                <div class="page-header-content">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="index.html"><i class="fas fa-home me-2"></i>Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Projects</li>
+                        </ol>
+                    </nav>
+                    <h1><i class="fas fa-project-diagram me-3"></i>Professional Projects</h1>
+                    <p>A comprehensive collection of my work in network security, infrastructure, and system administration</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Grid -->
+        <section class="section projects-full-section">
+            <div class="container">
+                
+                <!-- Project Filters -->
+                <div class="project-filters">
+                    <button class="filter-btn active" data-filter="all">
+                        <i class="fas fa-th me-2"></i>All
+                    </button>
+                    <button class="filter-btn" data-filter="security">
+                        <i class="fas fa-shield-alt me-2"></i>Security
+                    </button>
+                    <button class="filter-btn" data-filter="network">
+                        <i class="fas fa-network-wired me-2"></i>Network
+                    </button>
+                    <button class="filter-btn" data-filter="automation">
+                        <i class="fas fa-robot me-2"></i>Automation
+                    </button>
+                    <button class="filter-btn" data-filter="linux">
+                        <i class="fab fa-linux me-2"></i>Linux
+                    </button>
+                </div>
+
+                <div class="row g-4 projects-container">
+                    
+                    <!-- Project 1: n8n AI -->
+                    <div class="col-lg-6 project-item" data-category="automation security">
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="assets/pdf/project/n8n-AI.png" alt="Intelligent IDS workflow" />
+                                <div class="project-overlay">
+                                    <span class="project-category"><i class="fas fa-robot me-2"></i>AI & Automation</span>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <h3>Intelligent IDS: Automated Log Analysis with n8n and AI</h3>
+                                <p class="project-problem"><strong><i class="fas fa-exclamation-triangle me-2"></i>Problem:</strong> Suricata generates a high volume of logs every day, including many false positives, which consumes analyst time.</p>
+                                <p class="project-solution"><strong><i class="fas fa-check-circle me-2"></i>Solution:</strong> Connected Suricata to an AI workflow through n8n to automate triage and prioritization.</p>
+                                <ul class="project-features">
+                                    <li><i class="fas fa-angle-right"></i>Suricata writes events to file; n8n detects and reads automatically</li>
+                                    <li><i class="fas fa-angle-right"></i>AI analyzes context and identifies critical vs. noise activity</li>
+                                    <li><i class="fas fa-angle-right"></i>Automatic email alerts with summary and recommended actions</li>
+                                </ul>
+                                <div class="project-tags">
+                                    <span>n8n</span>
+                                    <span>AI</span>
+                                    <span>Suricata</span>
+                                    <span>IDS</span>
+                                </div>
+                                <a href="assets/pdf/project/raport-n8n-AI.pdf" target="_blank" class="project-link">
+                                    <i class="fas fa-file-pdf me-2"></i>View Full Report
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2: WiFi Security -->
+                    <div class="col-lg-6 project-item" data-category="security network">
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="assets/pdf/project/wifi-atack.png" alt="Wireless security research" />
+                                <div class="project-overlay">
+                                    <span class="project-category"><i class="fas fa-wifi me-2"></i>Wireless Security</span>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <h3>Wireless Security Researcher</h3>
+                                <p>Enterprise Wi-Fi security assessment and attack-simulation research project.</p>
+                                <ul class="project-features">
+                                    <li><i class="fas fa-angle-right"></i><strong>Tools:</strong> Kali Linux, Aircrack-ng Suite, Wireshark, Bettercap, Hashcat, MDK3, Eaphammer</li>
+                                    <li><i class="fas fa-angle-right"></i><strong>Simulation:</strong> Captured 4-Way Handshakes, ran offline dictionary attacks, created fake APs for MITM tests</li>
+                                    <li><i class="fas fa-angle-right"></i><strong>Analysis:</strong> Audited enterprise flaws and documented mitigation with WPA3-SAE and WIDS</li>
+                                </ul>
+                                <div class="project-tags">
+                                    <span>Kali Linux</span>
+                                    <span>Aircrack-ng</span>
+                                    <span>Penetration Testing</span>
+                                    <span>WiFi</span>
+                                </div>
+                                <a href="assets/pdf/project/wifi-atack.pdf" target="_blank" class="project-link">
+                                    <i class="fas fa-file-pdf me-2"></i>View Full Report
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3: WiFi Survey -->
+                    <div class="col-lg-6 project-item" data-category="network">
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="assets/pdf/project/Survey_WiFi.png" alt="WiFi site survey" />
+                                <div class="project-overlay">
+                                    <span class="project-category"><i class="fas fa-signal me-2"></i>Network Planning</span>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <h3>Wi-Fi Network Planning & Site Survey Optimization</h3>
+                                <p>Technical study for designing, mapping, and optimizing wireless coverage while minimizing interference.</p>
+                                <ul class="project-features">
+                                    <li><i class="fas fa-angle-right"></i><strong>Ekahau Pro / TamoGraph:</strong> 3D predictive planning and advanced heatmapping</li>
+                                    <li><i class="fas fa-angle-right"></i><strong>NetSpot:</strong> Coverage visualization and dead-zone identification</li>
+                                    <li><i class="fas fa-angle-right"></i><strong>Acrylic Wi-Fi:</strong> Real-time signal monitoring and diagnostics</li>
+                                    <li><i class="fas fa-angle-right"></i><strong>AirMagnet Survey:</strong> Spectrum analysis and interference-source detection</li>
+                                </ul>
+                                <div class="project-tags">
+                                    <span>Ekahau Pro</span>
+                                    <span>NetSpot</span>
+                                    <span>Heatmapping</span>
+                                    <span>WiFi Planning</span>
+                                </div>
+                                <a href="assets/pdf/project/Survey_WiFi.pdf" target="_blank" class="project-link">
+                                    <i class="fas fa-file-pdf me-2"></i>View Full Report
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 4: WiFi Infrastructure -->
+                    <div class="col-lg-6 project-item" data-category="network">
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="assets/pdf/project/study-wifi.png" alt="WiFi infrastructure design" />
+                                <div class="project-overlay">
+                                    <span class="project-category"><i class="fas fa-building me-2"></i>Infrastructure</span>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <h3>Wi-Fi Infrastructure Design & Strategic Market Analysis</h3>
+                                <p>Designed scalable Wi-Fi 6 solutions for a private school (290 users) and a medical clinic (200+ users).</p>
+                                <ul class="project-features">
+                                    <li><i class="fas fa-angle-right"></i><strong>Technical Execution:</strong> Multi-VLAN architecture and optimized 2.4/5GHz spectrum management</li>
+                                    <li><i class="fas fa-angle-right"></i><strong>Advanced Features:</strong> 802.11r/k/v roaming plus WPA3 and RADIUS for CNDP-compliant protection</li>
+                                    <li><i class="fas fa-angle-right"></i><strong>Financial Modeling:</strong> CAPEX/OPEX audit with ROI-based deployment recommendations</li>
+                                </ul>
+                                <div class="project-tags">
+                                    <span>WiFi 6</span>
+                                    <span>VLAN</span>
+                                    <span>RADIUS</span>
+                                    <span>Enterprise</span>
+                                </div>
+                                <a href="assets/pdf/project/study-wifi.pdf" target="_blank" class="project-link">
+                                    <i class="fas fa-file-pdf me-2"></i>View Full Report
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 5: Open Firmwares -->
+                    <div class="col-lg-6 project-item" data-category="network linux">
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="assets/pdf/project/Open-firmwares.png" alt="Open-source router firmware" />
+                                <div class="project-overlay">
+                                    <span class="project-category"><i class="fas fa-microchip me-2"></i>Firmware</span>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <h3>Analysis & Documentation of Open-Source Router Firmwares</h3>
+                                <p>Technical analysis of open-source router firmware options with scenario-based recommendations.</p>
+                                <ul class="project-features">
+                                    <li><i class="fas fa-angle-right"></i>Researched official documentation and community resources</li>
+                                    <li><i class="fas fa-angle-right"></i>Evaluated installation workflow, hardware compatibility, security, and performance</li>
+                                    <li><i class="fas fa-angle-right"></i>Built recommendations for home, enterprise, and campus use cases</li>
+                                    <li><i class="fas fa-angle-right"></i>Produced synthesis report with comparative tables and charts</li>
+                                </ul>
+                                <div class="project-tags">
+                                    <span>OpenWrt</span>
+                                    <span>pfSense</span>
+                                    <span>DD-WRT</span>
+                                    <span>Tomato</span>
+                                </div>
+                                <a href="assets/pdf/project/Open-firmwares.pdf" target="_blank" class="project-link">
+                                    <i class="fas fa-file-pdf me-2"></i>View Full Report
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 6: Cryptography -->
+                    <div class="col-lg-6 project-item" data-category="security">
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="assets/pdf/project/sec-crypt.png" alt="Cryptographic systems" />
+                                <div class="project-overlay">
+                                    <span class="project-category"><i class="fas fa-lock me-2"></i>Cryptography</span>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <h3>Implementation of Secure Cryptographic Systems</h3>
+                                <p>Designed secure encryption workflows and practical cryptography validation scenarios.</p>
+                                <ul class="project-features">
+                                    <li><i class="fas fa-angle-right"></i>Engineered secure data-encryption workflows using Python and AES-256 standards</li>
+                                    <li><i class="fas fa-angle-right"></i>Analyzed vulnerabilities by demonstrating risks of ECB mode vs. secure CBC/GCM modes</li>
+                                    <li><i class="fas fa-angle-right"></i>Applied the C.I.A. Triad to guarantee data integrity and authorized access</li>
+                                    <li><i class="fas fa-angle-right"></i>Used OpenSSL for robust key generation and cross-platform encryption testing</li>
+                                </ul>
+                                <div class="project-tags">
+                                    <span>Python</span>
+                                    <span>AES-256</span>
+                                    <span>OpenSSL</span>
+                                    <span>Encryption</span>
+                                </div>
+                                <a href="assets/pdf/project/sec-crypt.pdf" target="_blank" class="project-link">
+                                    <i class="fas fa-file-pdf me-2"></i>View Full Report
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 7: Debian DNS -->
+                    <div class="col-lg-6 project-item" data-category="linux network">
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="assets/pdf/project/dns_debian.png" alt="Debian DNS server" />
+                                <div class="project-overlay">
+                                    <span class="project-category"><i class="fab fa-linux me-2"></i>Linux Server</span>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <h3>Debian 13 DNS Server Implementation with BIND9</h3>
+                                <p>Built and validated a DNS server environment on Debian 13 using BIND9 for reliable domain resolution.</p>
+                                <ul class="project-features">
+                                    <li><i class="fas fa-angle-right"></i><strong>Core Stack:</strong> Debian 13, BIND9, and apt for package management</li>
+                                    <li><i class="fas fa-angle-right"></i><strong>Validation:</strong> Used named-checkconf and named-checkzone for verification</li>
+                                    <li><i class="fas fa-angle-right"></i><strong>Operations:</strong> Managed service lifecycle with systemctl</li>
+                                    <li><i class="fas fa-angle-right"></i><strong>Testing:</strong> Used dig queries to confirm DNS resolution</li>
+                                </ul>
+                                <div class="project-tags">
+                                    <span>Debian</span>
+                                    <span>BIND9</span>
+                                    <span>DNS</span>
+                                    <span>Linux</span>
+                                </div>
+                                <a href="assets/pdf/project/dns_debian.pdf" target="_blank" class="project-link">
+                                    <i class="fas fa-file-pdf me-2"></i>View Full Report
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 8: Debian Hardening -->
+                    <div class="col-lg-6 project-item" data-category="linux security">
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="assets/pdf/project/Debian13-Deployment.png" alt="Debian server hardening" />
+                                <div class="project-overlay">
+                                    <span class="project-category"><i class="fas fa-shield-alt me-2"></i>Security</span>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <h3>Debian 13 Server Hardening and Deployment</h3>
+                                <p>Hardened and deployed a Debian 13 server with strict access control and firewall policy.</p>
+                                <ul class="project-features">
+                                    <li><i class="fas fa-angle-right"></i><strong>Core Platform:</strong> Debian 13 with secure package lifecycle using apt</li>
+                                    <li><i class="fas fa-angle-right"></i><strong>Access Security:</strong> SSH key-based authentication, sudo delegation, Fail2ban protection</li>
+                                    <li><i class="fas fa-angle-right"></i><strong>Network Security:</strong> Nftables with deny-by-default firewall policy</li>
+                                    <li><i class="fas fa-angle-right"></i><strong>System Design:</strong> Strategic partitioning for isolation and stability</li>
+                                </ul>
+                                <div class="project-tags">
+                                    <span>Debian</span>
+                                    <span>Hardening</span>
+                                    <span>Fail2ban</span>
+                                    <span>Nftables</span>
+                                </div>
+                                <a href="assets/pdf/project/Debian13-Deployment.pdf" target="_blank" class="project-link">
+                                    <i class="fas fa-file-pdf me-2"></i>View Full Report
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 9: DNS Master/Slave -->
+                    <div class="col-lg-6 project-item" data-category="linux network">
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="assets/pdf/project/dns_slave.png" alt="DNS replication" />
+                                <div class="project-overlay">
+                                    <span class="project-category"><i class="fas fa-sync me-2"></i>Replication</span>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <h3>DNS Master/Slave Replication and Security</h3>
+                                <p>Configured secure DNS replication between master and slave BIND9 servers on Debian 13.</p>
+                                <ul class="project-features">
+                                    <li><i class="fas fa-angle-right"></i><strong>Core Setup:</strong> Debian 13 and BIND9 in master/slave roles</li>
+                                    <li><i class="fas fa-angle-right"></i><strong>Replication:</strong> SOA serial tracking, NOTIFY signaling, AXFR/IXFR transfers</li>
+                                    <li><i class="fas fa-angle-right"></i><strong>Security:</strong> ACL restrictions on zone transfers to authorized servers only</li>
+                                    <li><i class="fas fa-angle-right"></i><strong>Validation:</strong> Service/log checks with systemctl and journalctl</li>
+                                </ul>
+                                <div class="project-tags">
+                                    <span>BIND9</span>
+                                    <span>DNS</span>
+                                    <span>Replication</span>
+                                    <span>High Availability</span>
+                                </div>
+                                <a href="assets/pdf/project/dns_slave.pdf" target="_blank" class="project-link">
+                                    <i class="fas fa-file-pdf me-2"></i>View Full Report
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 10: Backup Strategies -->
+                    <div class="col-lg-6 project-item" data-category="linux">
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="assets/pdf/project/backup.png" alt="Backup strategies" />
+                                <div class="project-overlay">
+                                    <span class="project-category"><i class="fas fa-hdd me-2"></i>Backup</span>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <h3>Debian Linux Backup and Restoration Strategies</h3>
+                                <p>Designed resilient backup and recovery workflows aligned with business continuity objectives.</p>
+                                <ul class="project-features">
+                                    <li><i class="fas fa-angle-right"></i><strong>Strategy:</strong> Applied the 3-2-1 backup rule with defined RPO/RTO targets</li>
+                                    <li><i class="fas fa-angle-right"></i><strong>Tooling:</strong> Used tar and rsync for archive and incremental backup operations</li>
+                                    <li><i class="fas fa-angle-right"></i><strong>Automation:</strong> Implemented Bash scripts and scheduled execution via cron</li>
+                                    <li><i class="fas fa-angle-right"></i><strong>Advanced Recovery:</strong> BorgBackup with encryption/deduplication</li>
+                                </ul>
+                                <div class="project-tags">
+                                    <span>Backup</span>
+                                    <span>rsync</span>
+                                    <span>BorgBackup</span>
+                                    <span>Bash</span>
+                                </div>
+                                <a href="assets/pdf/project/Backup.pdf" target="_blank" class="project-link">
+                                    <i class="fas fa-file-pdf me-2"></i>View Full Report
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 11: Docker n8n -->
+                    <div class="col-lg-6 project-item" data-category="automation linux">
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="assets/pdf/project/docker_n8n.png" alt="Docker automation" />
+                                <div class="project-overlay">
+                                    <span class="project-category"><i class="fab fa-docker me-2"></i>DevOps</span>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <h3>Automated IT Monitoring (Innov-Alert)</h3>
+                                <p>Built an automated monitoring platform on Linux with Docker and n8n for security visibility.</p>
+                                <ul class="project-features">
+                                    <li><i class="fas fa-angle-right"></i>Deployed Docker and n8n workflow automation for streamlined monitoring</li>
+                                    <li><i class="fas fa-angle-right"></i>Designed workflow to detect new database users and send real-time Slack alerts</li>
+                                    <li><i class="fas fa-angle-right"></i>Implemented Docker Volumes for persistence and Docker Compose for maintenance</li>
+                                </ul>
+                                <div class="project-tags">
+                                    <span>Docker</span>
+                                    <span>n8n</span>
+                                    <span>Monitoring</span>
+                                    <span>Slack</span>
+                                </div>
+                                <a href="assets/pdf/project/docker_n8n.pdf" target="_blank" class="project-link">
+                                    <i class="fas fa-file-pdf me-2"></i>View Full Report
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 12: LEMP Stack -->
+                    <div class="col-lg-6 project-item" data-category="linux network">
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="assets/pdf/project/StackLEMP.png" alt="LEMP stack" />
+                                <div class="project-overlay">
+                                    <span class="project-category"><i class="fas fa-server me-2"></i>Web Server</span>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <h3>Multi-Site Web Infrastructure (LEMP Stack)</h3>
+                                <p>Deployed and managed a multi-site LEMP environment on a single server for efficient resource usage.</p>
+                                <ul class="project-features">
+                                    <li><i class="fas fa-angle-right"></i>Implemented Linux, Nginx, MariaDB, and PHP stack to host multiple websites</li>
+                                    <li><i class="fas fa-angle-right"></i>Configured Nginx Virtual Hosts for domain-based routing</li>
+                                    <li><i class="fas fa-angle-right"></i>Secured database administration via phpMyAdmin with IP restrictions</li>
+                                </ul>
+                                <div class="project-tags">
+                                    <span>LEMP</span>
+                                    <span>Nginx</span>
+                                    <span>MariaDB</span>
+                                    <span>PHP</span>
+                                </div>
+                                <a href="assets/pdf/project/StackLEMP.pdf" target="_blank" class="project-link">
+                                    <i class="fas fa-file-pdf me-2"></i>View Full Report
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 13: Squid Proxy -->
+                    <div class="col-lg-6 project-item" data-category="network security linux">
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="assets/pdf/project/proxy.png" alt="Squid proxy" />
+                                <div class="project-overlay">
+                                    <span class="project-category"><i class="fas fa-globe me-2"></i>Proxy</span>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <h3>Secure Web Access Gateway (Squid Proxy)</h3>
+                                <p>Implemented a forward proxy on Linux to centralize, secure, and optimize internet access.</p>
+                                <ul class="project-features">
+                                    <li><i class="fas fa-angle-right"></i>Deployed Squid as a forward proxy for controlled outbound web traffic</li>
+                                    <li><i class="fas fa-angle-right"></i>Configured ACL policies to block restricted domains and unauthorized resources</li>
+                                    <li><i class="fas fa-angle-right"></i>Enabled caching to reduce bandwidth usage and accelerate repeated requests</li>
+                                </ul>
+                                <div class="project-tags">
+                                    <span>Squid</span>
+                                    <span>Proxy</span>
+                                    <span>ACL</span>
+                                    <span>Caching</span>
+                                </div>
+                                <a href="assets/pdf/project/proxy.pdf" target="_blank" class="project-link">
+                                    <i class="fas fa-file-pdf me-2"></i>View Full Report
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 14: Vulnerability Exploitation -->
+                    <div class="col-lg-6 project-item" data-category="security">
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="assets/pdf/project/Vulnerability Exploitation.png" alt="Vulnerability exploitation" />
+                                <div class="project-overlay">
+                                    <span class="project-category"><i class="fas fa-bug me-2"></i>Penetration Testing</span>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <h3>System Vulnerability Exploitation & Penetration Testing Lab</h3>
+                                <p>Executed a penetration test lab and compromised a vulnerable target through exploitation.</p>
+                                <ul class="project-features">
+                                    <li><i class="fas fa-angle-right"></i><strong>Exploitation:</strong> Used Metasploit to exploit Samba CVE-2007-2447 and obtain root access</li>
+                                    <li><i class="fas fa-angle-right"></i><strong>Credential Attack:</strong> Used Hydra for dictionary attacks against SSH authentication</li>
+                                    <li><i class="fas fa-angle-right"></i><strong>Lab Stack:</strong> Kali Linux + Metasploitable2 with Nmap reconnaissance</li>
+                                </ul>
+                                <div class="project-tags">
+                                    <span>Metasploit</span>
+                                    <span>Kali Linux</span>
+                                    <span>Exploitation</span>
+                                    <span>CVE</span>
+                                </div>
+                                <a href="assets/pdf/project/Vulnerability Exploitation.pdf" target="_blank" class="project-link">
+                                    <i class="fas fa-file-pdf me-2"></i>View Full Report
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 15: Vulnerability Mapping -->
+                    <div class="col-lg-6 project-item" data-category="security">
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="assets/pdf/project/Vulnerability Mapping.png" alt="Vulnerability mapping" />
+                                <div class="project-overlay">
+                                    <span class="project-category"><i class="fas fa-search me-2"></i>Reconnaissance</span>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <h3>Network Reconnaissance and Vulnerability Mapping</h3>
+                                <p>Performed reconnaissance and vulnerability mapping on Metasploitable2 to evaluate exposed services.</p>
+                                <ul class="project-features">
+                                    <li><i class="fas fa-angle-right"></i><strong>Nmap:</strong> Host discovery, port/service enumeration, version detection, OS fingerprinting</li>
+                                    <li><i class="fas fa-angle-right"></i><strong>Netdiscover:</strong> ARP-based discovery of live hosts and MAC addresses</li>
+                                    <li><i class="fas fa-angle-right"></i><strong>NSE Scripts:</strong> Automated checks for weak configurations such as anonymous FTP access</li>
+                                </ul>
+                                <div class="project-tags">
+                                    <span>Nmap</span>
+                                    <span>Netdiscover</span>
+                                    <span>Reconnaissance</span>
+                                    <span>NSE</span>
+                                </div>
+                                <a href="assets/pdf/project/Vulnerability Mapping.pdf" target="_blank" class="project-link">
+                                    <i class="fas fa-file-pdf me-2"></i>View Full Report
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 16: Web App Security -->
+                    <div class="col-lg-6 project-item" data-category="security">
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="assets/pdf/project/Securite_Web.png" alt="Web application security" />
+                                <div class="project-overlay">
+                                    <span class="project-category"><i class="fas fa-spider me-2"></i>Web Security</span>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <h3>Web Application Penetration Testing</h3>
+                                <p>Performed a security audit on DVWA and exploited critical web vulnerabilities.</p>
+                                <ul class="project-features">
+                                    <li><i class="fas fa-angle-right"></i><strong>OWASP Coverage:</strong> SQL Injection and unrestricted file upload leading to RCE</li>
+                                    <li><i class="fas fa-angle-right"></i><strong>Exploitation Stack:</strong> SQLMap, Msfvenom, Metasploit, and PHP webshell techniques</li>
+                                    <li><i class="fas fa-angle-right"></i><strong>Post-Exploitation:</strong> Session handling, hash extraction, and password cracking analysis</li>
+                                </ul>
+                                <div class="project-tags">
+                                    <span>OWASP</span>
+                                    <span>SQL Injection</span>
+                                    <span>DVWA</span>
+                                    <span>Web Shell</span>
+                                </div>
+                                <a href="assets/pdf/project/Securite_Web.pdf" target="_blank" class="project-link">
+                                    <i class="fas fa-file-pdf me-2"></i>View Full Report
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 17: Cryptography Protocols -->
+                    <div class="col-lg-6 project-item" data-category="security">
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="assets/pdf/project/Cryptography .png" alt="Cryptography protocols" />
+                                <div class="project-overlay">
+                                    <span class="project-category"><i class="fas fa-key me-2"></i>Cryptography</span>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <h3>Implementation of Integrity and Asymmetric Cryptography Protocols</h3>
+                                <p>Practical module applying cryptographic controls for integrity, secure key exchange, and authentication.</p>
+                                <ul class="project-features">
+                                    <li><i class="fas fa-angle-right"></i><strong>OpenSSL:</strong> Generated RSA key pairs, produced hashes, and performed encryption/decryption</li>
+                                    <li><i class="fas fa-angle-right"></i><strong>Integrity:</strong> Used SHA-256/MD5 hashing to validate files and demonstrate avalanche effect</li>
+                                    <li><i class="fas fa-angle-right"></i><strong>Hybrid Crypto:</strong> Combined RSA and AES-256 for secure and efficient message protection</li>
+                                    <li><i class="fas fa-angle-right"></i><strong>Trust Protocols:</strong> Digital signatures and Diffie-Hellman key exchange</li>
+                                </ul>
+                                <div class="project-tags">
+                                    <span>RSA</span>
+                                    <span>SHA-256</span>
+                                    <span>Diffie-Hellman</span>
+                                    <span>Digital Signatures</span>
+                                </div>
+                                <a href="assets/pdf/project/Cryptography .pdf" target="_blank" class="project-link">
+                                    <i class="fas fa-file-pdf me-2"></i>View Full Report
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 18: Mini-PKI -->
+                    <div class="col-lg-6 project-item" data-category="security">
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="assets/pdf/project/Certificats.png" alt="PKI implementation" />
+                                <div class="project-overlay">
+                                    <span class="project-category"><i class="fas fa-certificate me-2"></i>PKI</span>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <h3>Implementation of a Mini-PKI and Digital Certificate Management</h3>
+                                <p>Designed and deployed a PKI simulation to secure an internal web server with a trusted X.509 certificate chain.</p>
+                                <ul class="project-features">
+                                    <li><i class="fas fa-angle-right"></i><strong>Certificate Authority:</strong> Built a Root CA and signed server certificates using OpenSSL and SHA-256</li>
+                                    <li><i class="fas fa-angle-right"></i><strong>Lifecycle Management:</strong> Generated private keys, created CSRs, and managed certificate signing workflows</li>
+                                    <li><i class="fas fa-angle-right"></i><strong>Validation:</strong> Verified integrity and TLS chain transmission using Wireshark and browser inspection</li>
+                                </ul>
+                                <div class="project-tags">
+                                    <span>PKI</span>
+                                    <span>X.509</span>
+                                    <span>TLS</span>
+                                    <span>OpenSSL</span>
+                                </div>
+                                <a href="assets/pdf/project/Certificats.pdf" target="_blank" class="project-link">
+                                    <i class="fas fa-file-pdf me-2"></i>View Full Report
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-brand">
+                        <h3>Rachid<span class="text-accent">.</span></h3>
+                        <p>Network & Security Engineer</p>
+                    </div>
+                    <div class="footer-social">
+                        <a href="https://www.linkedin.com/in/rachid-bouselama-346575248/" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://wa.me/212702874404" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="https://github.com/chidoxbma" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="mailto:bmarachid@gmail.com">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                    <div class="footer-contact">
+                        <p><i class="fas fa-envelope me-2"></i>bmarachid@gmail.com</p>
+                        <p><i class="fas fa-phone me-2"></i>+212 0702874404</p>
+                        <p><i class="fas fa-map-marker-alt me-2"></i>Marrakech, Morocco</p>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2024 Rachid Bouselama. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Custom JS -->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>
